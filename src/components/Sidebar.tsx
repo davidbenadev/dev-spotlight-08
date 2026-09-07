@@ -22,10 +22,10 @@ export function Sidebar({ active }: { active: string }) {
         <div className="mt-2 h-28 w-28 overflow-hidden rounded-full border-2 border-spotify bg-elevated" />
 
         <h1 className="mt-5 text-xl font-bold tracking-tight text-foreground">
-          DAVID RINCON BENAVIDES
+          DAVID  BENAVIDES
         </h1>
         <p className="mt-1 text-xs font-medium tracking-wide text-spotify uppercase">
-          Fullstack Developer · Back-End Specialist
+          SENIOR AI FULLSTACK ENGINEER
         </p>
         <p className="mt-1 text-[11px] text-subdued">CDMX, México</p>
 
