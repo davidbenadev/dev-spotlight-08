@@ -1,15 +1,15 @@
-import { Github, Linkedin } from "lucide-react";
+import { Mail, Linkedin } from "lucide-react";
 
 const socialLinks = [
   {
-    label: "GitHub",
-    href: "https://github.com",
-    icon: Github,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/david-rincon-benavides",
+    icon: Linkedin,
   },
   {
-    label: "LinkedIn",
-    href: "https://linkedin.com",
-    icon: Linkedin,
+    label: "Email",
+    href: "mailto:davirin96@gmail.com",
+    icon: Mail,
   },
 ];
 
@@ -20,7 +20,7 @@ export function Footer() {
     <footer className="border-t border-border bg-ink px-6 py-12">
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 sm:flex-row">
         <p className="text-sm text-muted-foreground">
-          © {year} David Benavides. All rights reserved.
+          © {year} David Rincon Benavides. Todos los derechos reservados.
         </p>
 
         <div className="flex items-center gap-4">

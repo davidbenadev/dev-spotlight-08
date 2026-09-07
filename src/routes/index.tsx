@@ -11,20 +11,20 @@ import { Footer } from "@/components/Footer";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "David Benavides — Senior AI Fullstack Engineer" },
+      { title: "David Rincon Benavides — Desarrollador Fullstack" },
       {
         name: "description",
         content:
-          "Portfolio of David Benavides, a Senior AI Fullstack Engineer building intelligent, end-to-end software products.",
+          "Portafolio de David Rincon Benavides, Desarrollador Web Fullstack especializado en Back-End, nube y despliegues con contenedores.",
       },
       {
         property: "og:title",
-        content: "David Benavides — Senior AI Fullstack Engineer",
+        content: "David Rincon Benavides — Desarrollador Fullstack",
       },
       {
         property: "og:description",
         content:
-          "Portfolio of David Benavides, a Senior AI Fullstack Engineer building intelligent, end-to-end software products.",
+          "Portafolio de David Rincon Benavides, Desarrollador Web Fullstack especializado en Back-End, nube y despliegues con contenedores.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
