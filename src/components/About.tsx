@@ -6,7 +6,7 @@ export function About() {
       </h2>
       <div className="mt-4 space-y-4 rounded-xl border border-border bg-elevated p-6 text-sm leading-relaxed text-muted-foreground">
         <p>
-          Desarrollador Web Fullstack con más de 6 años de trayectoria,
+          Desarrollador Web Fullstack con más de 7 años de trayectoria,
           especializado en Back-End. Tengo habilidades sólidas en el manejo de
           servidores en la nube, procesos de deployment y administración de
           sistemas en contenedores.

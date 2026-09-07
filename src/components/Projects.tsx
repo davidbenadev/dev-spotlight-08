@@ -43,7 +43,7 @@ export function Projects() {
   return (
     <section id="projects" className="px-8 pb-16">
       <h2 className="text-lg font-bold uppercase tracking-wide text-foreground">
-        Selected Projects
+        PORTAFOLIO
       </h2>
 
       <div className="mt-5 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
