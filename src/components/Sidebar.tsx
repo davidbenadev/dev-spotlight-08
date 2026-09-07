@@ -1,17 +1,18 @@
-import { Home, User, LayoutGrid, ListOrdered, Mail, Github, Linkedin, Youtube, FileText } from "lucide-react";
+import { Home, User, LayoutGrid, ListOrdered, Mail, Github, Linkedin, FileText } from "lucide-react";
+import cvAsset from "@/assets/cv.pdf.asset.json";
 
 const navLinks = [
-  { label: "Home", href: "#home", icon: Home },
-  { label: "About Me", href: "#about", icon: User },
-  { label: "Portfolio", href: "#projects", icon: LayoutGrid },
-  { label: "Experience", href: "#experience", icon: ListOrdered },
-  { label: "Contact", href: "#contact", icon: Mail },
+  { label: "Inicio", href: "#home", icon: Home },
+  { label: "Sobre Mí", href: "#about", icon: User },
+  { label: "Portafolio", href: "#projects", icon: LayoutGrid },
+  { label: "Experiencia", href: "#experience", icon: ListOrdered },
+  { label: "Contacto", href: "#contact", icon: Mail },
 ];
 
 const socials = [
-  { label: "LinkedIn", href: "https://linkedin.com", icon: Linkedin },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/david-rincon-benavides", icon: Linkedin },
   { label: "GitHub", href: "https://github.com", icon: Github },
-  { label: "YouTube", href: "https://youtube.com", icon: Youtube },
+  { label: "Email", href: "mailto:davirin96@gmail.com", icon: Mail },
 ];
 
 export function Sidebar({ active }: { active: string }) {
@@ -21,11 +22,12 @@ export function Sidebar({ active }: { active: string }) {
         <div className="mt-2 h-28 w-28 overflow-hidden rounded-full border-2 border-spotify bg-elevated" />
 
         <h1 className="mt-5 text-xl font-bold tracking-tight text-foreground">
-          DAVID BENAVIDES
+          DAVID RINCON BENAVIDES
         </h1>
         <p className="mt-1 text-xs font-medium tracking-wide text-spotify uppercase">
-          Senior AI Fullstack Engineer
+          Fullstack Developer · Back-End Specialist
         </p>
+        <p className="mt-1 text-[11px] text-subdued">CDMX, México</p>
 
         <nav className="mt-8 w-full space-y-1.5">
           {navLinks.map((link) => {
@@ -49,7 +51,7 @@ export function Sidebar({ active }: { active: string }) {
         </nav>
 
         <div className="mt-auto w-full pt-8">
-          <p className="text-xs font-semibold text-subdued">Quick Link</p>
+          <p className="text-xs font-semibold text-subdued">Enlaces</p>
           <div className="mt-3 flex items-center justify-center gap-3">
             {socials.map((s) => {
               const Icon = s.icon;
@@ -69,11 +71,12 @@ export function Sidebar({ active }: { active: string }) {
           </div>
 
           <a
-            href="#"
+            href={cvAsset.url}
+            download="CV_David_Rincon_Benavides.pdf"
             className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full border border-spotify px-4 py-2.5 text-sm font-semibold text-spotify transition-colors hover:bg-spotify hover:text-ink"
           >
             <FileText className="h-4 w-4" />
-            Download CV
+            Descargar CV
           </a>
         </div>
       </div>
