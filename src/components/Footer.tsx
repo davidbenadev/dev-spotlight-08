@@ -1,4 +1,5 @@
 import { Mail, Linkedin } from "lucide-react";
+import { useLanguage } from "@/lib/i18n";
 
 const socialLinks = [
   {
@@ -14,13 +15,14 @@ const socialLinks = [
 ];
 
 export function Footer() {
+  const { t } = useLanguage();
   const year = new Date().getFullYear();
 
   return (
     <footer className="border-t border-border bg-ink px-6 py-12">
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 sm:flex-row">
         <p className="text-sm text-muted-foreground">
-          © {year} David Rincon Benavides. Todos los derechos reservados.
+          © {year} David Rincon Benavides. {t.footer.rights}
         </p>
 
         <div className="flex items-center gap-4">

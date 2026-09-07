@@ -1,22 +1,16 @@
+import { useLanguage } from "@/lib/i18n";
+
 export function About() {
+  const { t } = useLanguage();
+
   return (
     <section id="about" className="px-8 pb-16">
       <h2 className="text-lg font-bold uppercase tracking-wide text-foreground">
-        Sobre Mí
+        {t.about.title}
       </h2>
       <div className="mt-4 space-y-4 rounded-xl border border-border bg-elevated p-6 text-sm leading-relaxed text-muted-foreground">
-        <p>
-          Desarrollador Web Fullstack con más de 7 años de trayectoria,
-          especializado en Back-End. Tengo habilidades sólidas en el manejo de
-          servidores en la nube, procesos de deployment y administración de
-          sistemas en contenedores.
-        </p>
-        <p>
-          Estoy comprometido con ofrecer soluciones eficientes e innovadoras,
-          adaptadas a las necesidades tecnológicas actuales, para crear
-          productos digitales de alta calidad, aprovechando al máximo mi
-          experiencia.
-        </p>
+        <p>{t.about.p1}</p>
+        <p>{t.about.p2}</p>
         <div className="flex flex-wrap gap-2 pt-2">
           {[
             "Laravel / PHP",
