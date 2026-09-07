@@ -1,5 +1,6 @@
 import { Home, User, LayoutGrid, ListOrdered, Mail, Github, Linkedin, FileText } from "lucide-react";
 import cvAsset from "@/assets/cv.pdf.asset.json";
+import profileAsset from "@/assets/profile.png.asset.json";
 
 const navLinks = [
   { label: "Inicio", href: "#home", icon: Home },
