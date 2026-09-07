@@ -20,7 +20,11 @@ export function Sidebar({ active }: { active: string }) {
   return (
     <aside className="lg:fixed lg:inset-y-4 lg:left-4 lg:w-72">
       <div className="flex h-full flex-col items-center rounded-2xl border border-spotify/60 bg-ink p-6 text-center">
-        <div className="mt-2 h-28 w-28 overflow-hidden rounded-full border-2 border-spotify bg-elevated" />
+        <img
+          src={profileAsset.url}
+          alt="David Rincon Benavides"
+          className="mt-2 h-28 w-28 rounded-full border-2 border-spotify bg-elevated object-cover"
+        />
 
         <h1 className="mt-5 text-xl font-bold tracking-tight text-foreground">
           DAVID  BENAVIDES
