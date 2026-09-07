@@ -2,24 +2,39 @@ export function About() {
   return (
     <section id="about" className="px-8 pb-16">
       <h2 className="text-lg font-bold uppercase tracking-wide text-foreground">
-        About Me
+        Sobre Mí
       </h2>
       <div className="mt-4 space-y-4 rounded-xl border border-border bg-elevated p-6 text-sm leading-relaxed text-muted-foreground">
         <p>
-          I am a software engineer with deep experience designing and shipping
-          fullstack applications across the entire product lifecycle, from
-          scalable backends to polished user interfaces.
+          Desarrollador Web Fullstack con más de 6 años de trayectoria,
+          especializado en Back-End. Tengo habilidades sólidas en el manejo de
+          servidores en la nube, procesos de deployment y administración de
+          sistemas en contenedores.
         </p>
         <p>
-          In recent years I have focused on integrating artificial intelligence
-          into real-world products: automating workflows, building intelligent
-          assistants, and helping teams move faster.
+          Estoy comprometido con ofrecer soluciones eficientes e innovadoras,
+          adaptadas a las necesidades tecnológicas actuales, para crear
+          productos digitales de alta calidad, aprovechando al máximo mi
+          experiencia.
         </p>
-        <p>
-          I value clean code, thoughtful architecture, and products that feel
-          effortless to use — whether leading a technical team or writing code
-          hands-on.
-        </p>
+        <div className="flex flex-wrap gap-2 pt-2">
+          {[
+            "Laravel / PHP",
+            "React · Next.js · Astro",
+            "Node.js",
+            "PostgreSQL · MySQL · Elasticsearch",
+            "Docker · Kubernetes",
+            "AWS · Azure · GCP · Digital Ocean",
+            "CI/CD · GitHub Actions",
+          ].map((skill) => (
+            <span
+              key={skill}
+              className="rounded-full border border-spotify/40 px-3 py-1 text-xs font-medium text-spotify"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
       </div>
     </section>
   );
