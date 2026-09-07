@@ -7,6 +7,7 @@ import { Experience } from "@/components/Experience";
 import { Projects } from "@/components/Projects";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { LanguageProvider } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -56,18 +57,20 @@ function Index() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background p-4 text-foreground">
-      <Sidebar active={active} />
-      <div className="lg:ml-[19rem]">
-        <main className="rounded-2xl border border-border bg-ink-light py-4">
-          <Hero />
-          <About />
-          <Projects />
-          <Experience />
-          <Contact />
-        </main>
-        <Footer />
+    <LanguageProvider>
+      <div className="min-h-screen bg-background p-4 text-foreground">
+        <Sidebar active={active} />
+        <div className="lg:ml-[19rem]">
+          <main className="rounded-2xl border border-border bg-ink-light py-4">
+            <Hero />
+            <About />
+            <Projects />
+            <Experience />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
       </div>
-    </div>
+    </LanguageProvider>
   );
 }
