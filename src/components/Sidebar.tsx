@@ -98,7 +98,7 @@ export function Sidebar({ active }: { active: string }) {
           </div>
 
           <a
-            href={cvAsset.url}
+            href={cvUrl}
             download="CV_David_Rincon_Benavides.pdf"
             className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full border border-spotify px-4 py-2.5 text-sm font-semibold text-spotify transition-colors hover:bg-spotify hover:text-ink"
           >
