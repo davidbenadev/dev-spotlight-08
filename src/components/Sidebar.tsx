@@ -1,6 +1,6 @@
 import { Home, User, LayoutGrid, ListOrdered, Mail, Github, Linkedin, FileText, Languages } from "lucide-react";
-import cvAsset from "@/assets/cv.pdf.asset.json";
-import profileAsset from "@/assets/profile.png.asset.json";
+import cvUrl from "@/assets/cv.pdf";
+import profileUrl from "@/assets/profile.png";
 import { useLanguage } from "@/lib/i18n";
 
 const navIcons = {
