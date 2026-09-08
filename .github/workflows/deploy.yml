@@ -45,12 +45,12 @@ jobs:
           VITE_BASE: ${{ steps.base.outputs.base }}
 
       - name: Add 404 fallback
-        run: cp ./.output/client/index.html ./.output/client/404.html
+        run: cp ./.output/public/index.html ./.output/public/404.html
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./.output/client
+          path: ./.output/public
 
   deploy:
     environment:
