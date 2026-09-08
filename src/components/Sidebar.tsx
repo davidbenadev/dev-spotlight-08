@@ -1,6 +1,6 @@
 import { Home, User, LayoutGrid, ListOrdered, Mail, Github, Linkedin, FileText, Languages } from "lucide-react";
-import cvAsset from "@/assets/cv.pdf.asset.json";
-import profileAsset from "@/assets/profile.png.asset.json";
+import cvUrl from "@/assets/cv.pdf";
+import profileUrl from "@/assets/profile.png";
 import { useLanguage } from "@/lib/i18n";
 
 const navIcons = {
@@ -34,7 +34,7 @@ export function Sidebar({ active }: { active: string }) {
     <aside className="lg:fixed lg:inset-y-4 lg:left-4 lg:w-72">
       <div className="flex h-full flex-col items-center rounded-2xl border border-spotify/60 bg-ink p-6 text-center">
         <img
-          src={profileAsset.url}
+          src={profileUrl}
           alt="David Rincon Benavides"
           className="mt-2 h-28 w-28 rounded-full border-2 border-spotify bg-elevated object-cover"
         />
@@ -98,7 +98,7 @@ export function Sidebar({ active }: { active: string }) {
           </div>
 
           <a
-            href={cvAsset.url}
+            href={cvUrl}
             download="CV_David_Rincon_Benavides.pdf"
             className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full border border-spotify px-4 py-2.5 text-sm font-semibold text-spotify transition-colors hover:bg-spotify hover:text-ink"
           >
