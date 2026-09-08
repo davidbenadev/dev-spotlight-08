@@ -25,8 +25,8 @@ const translations = {
     },
     about: {
       title: "Sobre Mí",
-      p1: "Desarrollador Web Fullstack con más de 7 años de trayectoria, especializado en Back-End. Tengo habilidades sólidas en el manejo de servidores en la nube, procesos de deployment y administración de sistemas en contenedores.",
-      p2: "Estoy comprometido con ofrecer soluciones eficientes e innovadoras, adaptadas a las necesidades tecnológicas actuales, para crear productos digitales de alta calidad, aprovechando al máximo mi experiencia.",
+      p1: "Ingeniero de software Full Stack con más de 7 años de experiencia desarrollando, diseñando y desplegando aplicaciones web, plataformas digitales y soluciones backend escalables.\n\nActualmente enfocado en el desarrollo de productos modernos impulsados por Inteligencia Artificial, integrando modelos y servicios de IA dentro de aplicaciones web y flujos de negocio. Cuento con experiencia trabajando de extremo a extremo en productos digitales utilizando tecnologías como TypeScript, React, React Native, Node.js, Next.js y Supabase, así como en el diseño de APIs, arquitecturas backend, bases de datos y servicios en la nube.\n\nMi experiencia combina desarrollo Front-End, Back-End, Mobile, Cloud y DevOps, permitiéndome participar en todo el ciclo de vida de un producto: arquitectura, desarrollo, integraciones, infraestructura, automatización, deployment, monitoreo y optimización.\n\nHe trabajado con infraestructuras en AWS, Google Cloud, Azure y DigitalOcean, implementando soluciones con Docker, Kubernetes, OpenShift y GitHub Actions. También cuento con amplia experiencia diseñando y administrando bases de datos relacionales y no relacionales utilizando PostgreSQL, MySQL, Supabase y Elasticsearch.\n\nA lo largo de mi carrera he participado y liderado equipos de desarrollo, definido arquitecturas técnicas, mejorado procesos de deployment y construido productos orientados a rendimiento, escalabilidad, mantenibilidad y experiencia de usuario.",
+      p2: "",
     },
     projects: {
       title: "Portafolio",
