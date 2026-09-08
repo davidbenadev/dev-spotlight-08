@@ -11,6 +11,9 @@ export function About() {
       <div className="mt-4 space-y-4 rounded-xl border border-border bg-elevated p-6 text-sm leading-relaxed text-muted-foreground">
         <p>{t.about.p1}</p>
         <p>{t.about.p2}</p>
+        <p>{t.about.p3}</p>
+        <p>{t.about.p4}</p>
+        <p>{t.about.p5}</p>
         <div className="flex flex-wrap gap-2 pt-2">
           {[
             "Laravel / PHP",

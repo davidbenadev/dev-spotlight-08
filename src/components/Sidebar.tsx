@@ -1,5 +1,4 @@
 import { Home, User, LayoutGrid, ListOrdered, Mail, Github, Linkedin, FileText, Languages } from "lucide-react";
-import cvUrl from "@/assets/cv.pdf";
 import profileUrl from "@/assets/profile.png";
 import { useLanguage } from "@/lib/i18n";
 
@@ -13,7 +12,7 @@ const navIcons = {
 
 const socials = [
   { label: "LinkedIn", href: "https://www.linkedin.com/in/david-rincon-benavides", icon: Linkedin },
-  { label: "GitHub", href: "https://github.com", icon: Github },
+  { label: "GitHub", href: "https://github.com/davidbenadev", icon: Github },
   { label: "Email", href: "mailto:davirin96@gmail.com", icon: Mail },
 ];
 
@@ -64,11 +63,10 @@ export function Sidebar({ active }: { active: string }) {
               <a
                 key={link.href}
                 href={link.href}
-                className={`flex items-center gap-3 rounded-lg px-4 py-2.5 text-sm font-medium transition-colors ${
-                  isActive
+                className={`flex items-center gap-3 rounded-lg px-4 py-2.5 text-sm font-medium transition-colors ${isActive
                     ? "bg-spotify text-ink"
                     : "text-muted-foreground hover:bg-elevated hover:text-spotify"
-                }`}
+                  }`}
               >
                 <Icon className="h-4 w-4" />
                 {link.label}
@@ -98,7 +96,7 @@ export function Sidebar({ active }: { active: string }) {
           </div>
 
           <a
-            href={cvUrl}
+            href="/cv.pdf"
             download="CV_David_Rincon_Benavides.pdf"
             className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full border border-spotify px-4 py-2.5 text-sm font-semibold text-spotify transition-colors hover:bg-spotify hover:text-ink"
           >

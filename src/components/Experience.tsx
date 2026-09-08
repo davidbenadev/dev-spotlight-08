@@ -47,7 +47,24 @@ export function Experience() {
           </p>
           <p className="text-xs text-subdued">{t.experience.school}</p>
           <p className="mt-3 text-xs text-muted-foreground">
-            {t.experience.courses}
+            <span className="font-semibold">{t.experience.coursesLabel}</span>{" "}
+            {t.experience.courses.map((course, index) => (
+              <span key={course.name}>
+                {course.url ? (
+                  <a
+                    href={course.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-spotify underline underline-offset-2 transition-colors"
+                  >
+                    {course.name}
+                  </a>
+                ) : (
+                  course.name
+                )}
+                {index < t.experience.courses.length - 1 ? ", " : ""}
+              </span>
+            ))}
           </p>
         </div>
         <div className="rounded-xl border border-border bg-elevated p-5">
