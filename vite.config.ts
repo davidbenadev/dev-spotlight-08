@@ -12,6 +12,11 @@ export default defineConfig({
   vite: {
     base,
   },
+  nitro: {
+    output: {
+      dir: 'dist',
+    }
+  },
   tanstackStart: {
     server: { entry: "server" },
     pages: [
