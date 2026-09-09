@@ -38,7 +38,7 @@ jobs:
       - name: Build
         # We set VITE_BASE to match the repository name in case it's a project page (e.g. user.github.io/repo-name). 
         # If you are using a custom domain or a user/organization page (user.github.io), you might need to change this to "/" or remove it.
-        run: VITE_BASE=/${{ github.event.repository.name }}/ bun run build
+        run: VITE_BASE=/ bun run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
