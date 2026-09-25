@@ -1,4 +1,4 @@
-import { Award, ExternalLink } from "lucide-react";
+import { Award, ExternalLink, GraduationCap, Languages } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 
 export function Experience() {
@@ -30,43 +30,48 @@ export function Experience() {
                   <li key={p}>{p}</li>
                 ))}
               </ul>
-              <p className="mt-3 text-xs font-medium text-spotify sm:hidden">
-                {item.period}
-              </p>
+              <p className="mt-3 text-xs font-medium text-spotify sm:hidden">{item.period}</p>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="mt-6 grid gap-5 sm:grid-cols-2">
-        <div className="rounded-xl border border-border bg-elevated p-5">
-          <h3 className="text-sm font-bold uppercase tracking-wide text-foreground">
+      <div className="mt-8 grid gap-5 sm:grid-cols-2">
+        <div className="relative overflow-hidden rounded-xl border border-spotify/50 bg-gradient-to-br from-elevated to-ink-light p-6 shadow-[0_0_28px_rgba(193,255,114,0.08)]">
+          <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full border border-spotify/20" />
+          <h3 className="relative flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-foreground">
+            <GraduationCap className="h-5 w-5 text-spotify" aria-hidden="true" />
             {t.experience.education}
           </h3>
           <div className="mt-4 flex items-center gap-4">
-            <div className="flex h-16 w-28 shrink-0 items-center justify-center rounded-lg bg-white p-2">
+            <div className="h-20 w-28 shrink-0 overflow-hidden rounded-lg border border-spotify/30 bg-elevated">
               <img
-                src="https://www.comunicacionsocial.uam.mx/identidaduam/images/encabezado.png"
-                alt="Logotipo de la Universidad Autónoma Metropolitana"
-                className="max-h-full max-w-full object-contain"
+                src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Uam_azc.jpg?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=original"
+                alt="Universidad Autónoma Metropolitana, Unidad Azcapotzalco"
+                className="h-full w-full object-cover"
                 loading="lazy"
               />
             </div>
             <div>
-              <p className="text-sm font-semibold text-foreground">
-                {t.experience.degree}
-              </p>
+              <p className="text-sm font-semibold text-foreground">{t.experience.degree}</p>
               <p className="mt-1 text-xs text-subdued">{t.experience.school}</p>
             </div>
           </div>
         </div>
-        <div className="rounded-xl border border-border bg-elevated p-5">
-          <h3 className="text-sm font-bold uppercase tracking-wide text-foreground">
+        <div className="relative overflow-hidden rounded-xl border border-spotify/50 bg-gradient-to-br from-elevated to-ink-light p-6 shadow-[0_0_28px_rgba(193,255,114,0.08)]">
+          <div className="absolute -bottom-10 -right-10 h-28 w-28 rounded-full border border-spotify/20" />
+          <h3 className="relative flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-foreground">
+            <Languages className="h-5 w-5 text-spotify" aria-hidden="true" />
             {t.experience.languages}
           </h3>
-          <ul className="mt-2 space-y-1 text-xs text-muted-foreground">
+          <ul className="relative mt-5 flex flex-wrap gap-2">
             {t.experience.langs.map((l) => (
-              <li key={l}>{l}</li>
+              <li
+                key={l}
+                className="rounded-full border border-spotify/30 bg-spotify/10 px-3 py-1.5 text-xs font-medium text-foreground"
+              >
+                {l}
+              </li>
             ))}
           </ul>
         </div>
@@ -87,7 +92,9 @@ export function Experience() {
                   <Award className="h-5 w-5" aria-hidden="true" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold leading-snug text-foreground">{course.name}</p>
+                  <p className="text-sm font-semibold leading-snug text-foreground">
+                    {course.name}
+                  </p>
                   <p className="mt-1 text-xs text-subdued">{course.issuer}</p>
                 </div>
               </div>
