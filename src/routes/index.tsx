@@ -1,8 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Sidebar } from "@/components/Sidebar";
-import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
+import { Skills } from "@/components/Skills";
 import { Experience } from "@/components/Experience";
 import { Projects } from "@/components/Projects";
 import { Contact } from "@/components/Contact";
@@ -34,7 +34,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const sectionIds = ["home", "about", "projects", "experience", "contact"];
+const sectionIds = ["home", "skills", "projects", "experience", "contact"];
 
 function Index() {
   const [active, setActive] = useState("home");
@@ -62,8 +62,8 @@ function Index() {
         <Sidebar active={active} />
         <div className="lg:ml-[19rem]">
           <main className="rounded-2xl border border-border bg-ink-light py-4">
-            <Hero />
             <About />
+            <Skills />
             <Projects />
             <Experience />
             <Contact />

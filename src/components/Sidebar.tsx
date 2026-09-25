@@ -1,12 +1,12 @@
-import { Home, User, LayoutGrid, ListOrdered, Mail, Github, Linkedin, FileText, Languages } from "lucide-react";
+import { User, Code2, LayoutGrid, ListOrdered, Mail, Github, Linkedin, FileText, Languages } from "lucide-react";
 import profileUrl from "@/assets/profile.png";
 import cvEsUrl from "@/assets/CV_2026.docx.pdf";
 import cvEnUrl from "@/assets/Resume_2026.docx.pdf";
 import { useLanguage } from "@/lib/i18n";
 
 const navIcons = {
-  home: Home,
-  about: User,
+  home: User,
+  skills: Code2,
   projects: LayoutGrid,
   experience: ListOrdered,
   contact: Mail,
@@ -24,7 +24,7 @@ export function Sidebar({ active }: { active: string }) {
   const navLinks = (
     [
       { id: "home", label: t.nav.home },
-      { id: "about", label: t.nav.about },
+      { id: "skills", label: t.nav.skills },
       { id: "projects", label: t.nav.projects },
       { id: "experience", label: t.nav.experience },
       { id: "contact", label: t.nav.contact },

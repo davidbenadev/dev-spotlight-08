@@ -5,8 +5,8 @@ export type Language = "es" | "en";
 const translations = {
   es: {
     nav: {
-      home: "Inicio",
-      about: "Sobre Mí",
+      home: "Resumen profesional",
+      skills: "Skills",
       projects: "Portafolio",
       experience: "Experiencia",
       contact: "Contacto",
@@ -17,60 +17,150 @@ const translations = {
       links: "Enlaces",
       downloadCv: "Descargar CV",
     },
-    hero: {
-      title: "Soluciones web eficientes, del backend a la nube",
-      subtitle:
-        "Senior AI Fullstack Engineer con más de 7 años de experiencia diseñando, desarrollando y desplegando aplicaciones web, mobile y soluciones backend escalables.",
-      cta: "Ver Portafolio",
-    },
     about: {
-      title: "Sobre Mí",
+      title: "Resumen profesional",
       p1: "Ingeniero de software Full Stack con más de 7 años de experiencia desarrollando, diseñando y desplegando aplicaciones web, plataformas digitales y soluciones backend escalables.",
       p2: "Actualmente enfocado en el desarrollo de productos modernos impulsados por Inteligencia Artificial, integrando modelos y servicios de IA dentro de aplicaciones web y flujos de negocio. Cuento con experiencia trabajando de extremo a extremo en productos digitales utilizando tecnologías como TypeScript, React, React Native, Node.js, Next.js y Supabase, así como en el diseño de APIs, arquitecturas backend, bases de datos y servicios en la nube.",
       p3: "Mi experiencia combina desarrollo Front-End, Back-End, Mobile, Cloud y DevOps, permitiéndome participar en todo el ciclo de vida de un producto: arquitectura, desarrollo, integraciones, infraestructura, automatización, deployment, monitoreo y optimización.",
       p4: "He trabajado con infraestructuras en AWS, Google Cloud, Azure y DigitalOcean, implementando soluciones con Docker, Kubernetes, OpenShift y GitHub Actions. También cuento con amplia experiencia diseñando y administrando bases de datos relacionales y no relacionales utilizando PostgreSQL, MySQL, Supabase y Elasticsearch.",
       p5: "A lo largo de mi carrera he participado y liderado equipos de desarrollo, definido arquitecturas técnicas, mejorado procesos de deployment y construido productos orientados a rendimiento, escalabilidad, mantenibilidad y experiencia de usuario.",
     },
+    skills: {
+      title: "Skills",
+      intro:
+        "Tecnologías y capacidades que utilizo para diseñar, construir y operar productos digitales de extremo a extremo.",
+      groups: [
+        {
+          title: "Inteligencia artificial",
+          items: [
+            "Generative AI",
+            "OpenAI API",
+            "Gemini API",
+            "RAG",
+            "Vector Databases",
+            "AI Agents",
+            "MCP",
+            "pgvector",
+          ],
+        },
+        {
+          title: "Lenguajes",
+          items: ["TypeScript", "JavaScript", "Python", "PHP", "Java", "Bash"],
+        },
+        {
+          title: "Frontend y mobile",
+          items: ["React", "Next.js", "Vue.js", "Astro", "React Native", "Cross-platform Mobile"],
+        },
+        {
+          title: "Backend",
+          items: ["Node.js", "Laravel", "Java Spring Boot", "REST APIs", "API Integration"],
+        },
+        {
+          title: "Datos",
+          items: [
+            "PostgreSQL",
+            "Supabase",
+            "MySQL",
+            "Elasticsearch",
+            "Database Design",
+            "Query Optimization",
+          ],
+        },
+        {
+          title: "Cloud y DevOps",
+          items: [
+            "AWS",
+            "Google Cloud",
+            "Azure",
+            "DigitalOcean",
+            "Docker",
+            "Kubernetes",
+            "OpenShift",
+            "GitHub Actions",
+            "CI/CD",
+            "Linux",
+            "Nginx",
+          ],
+        },
+        {
+          title: "Ingeniería de software",
+          items: [
+            "Software Architecture",
+            "System Design",
+            "Scalability",
+            "Performance Optimization",
+            "Technical Leadership",
+            "Code Review",
+          ],
+        },
+      ],
+    },
     projects: {
       title: "Portafolio",
+      viewProject: "Ver proyecto",
+      gallery: "Galería del proyecto",
+      site: "Sitio",
       repoLabel: (title: string) => `${title} repositorio`,
       demoLabel: (title: string) => `${title} demo en vivo`,
       items: [
         {
-          title: "AI Chat Orchestrator",
+          title: "Modern Estates",
           description:
-            "Capa de orquestación de chat con contexto que dirige las conversaciones al modelo adecuado y escala casos complejos.",
-          tags: ["Next.js", "Supabase", "LLMs"],
+            "Plataforma de propiedades premium que centraliza la venta, documentación legal y firma digital para clientes nacionales e internacionales.",
+          details:
+            "Desarrollé una plataforma de venta de propiedades de gama alta con Laravel y arquitectura hexagonal, complementada por un frontend en Next.js. La solución utiliza PostgreSQL para la persistencia de datos y fue desplegada en DigitalOcean, con almacenamiento seguro de activos y expedientes legales en buckets compatibles con S3. Integré DocuSign para los procesos de firma digital y conecté WebSockets y Webhooks para reflejar actualizaciones de estado en tiempo real.",
+          tags: ["Laravel", "Next.js", "PostgreSQL", "DigitalOcean", "DocuSign", "WebSockets"],
+          preview:
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/01modern-estates.png",
+          images: [
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/02modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/03modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/04modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/05modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/06modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/07modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/08modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/09modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/10modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/11modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/12modern-estates.png",
+          ],
+          siteUrl: "https://modernestates.borendain.com/",
+          githubUrl: null,
         },
         {
-          title: "Laravel CMS",
+          title: "Monitoreo de Antenas de Telecomunicación",
           description:
-            "Sistema de gestión de contenido modular con permisos granulares y flujo de aprobación editorial.",
-          tags: ["Laravel", "MySQL", "Livewire"],
-        },
-        {
-          title: "Dekiris",
-          description:
-            "Producto de automatización de flujos de trabajo para revisión de documentos, notificaciones y analítica competitiva.",
-          tags: ["TypeScript", "BullMQ"],
-        },
-        {
-          title: "Orchestrator",
-          description:
-            "API gateway seguro con rate-limiting que enruta tráfico entre microservicios internos con observabilidad completa.",
-          tags: ["Go", "Docker", "Prometheus"],
-        },
-        {
-          title: "Engineering Dashboard",
-          description:
-            "Dashboard de analítica en tiempo real que mide velocidad del equipo, salud del sistema y métricas de producto.",
-          tags: ["React", "Recharts"],
-        },
-        {
-          title: "AI Educator",
-          description:
-            "Asistente de aprendizaje adaptativo que genera lecciones y registra el progreso de los estudiantes automáticamente.",
-          tags: ["Python", "OpenAI"],
+            "Sistema operativo para supervisar una red nacional de antenas, coordinar incidencias y facilitar el trabajo de campo en zonas marginadas.",
+          details:
+            "Construí una plataforma de control para la operación logística de estaciones base de telecomunicación. Implementé microservicios con Lumen, autenticación JWT, permisos por rol y documentación OpenAPI/Swagger para integrar los sistemas involucrados. Diseñé la base de datos en PostgreSQL y desarrollé capacidades geoespaciales con PostGIS y Leaflet para localizar antenas e incidencias, generar reportes y exportar información. Además, realicé el deployment en un VPS con Nginx y trabajé con contenedores Docker sobre OpenShift para mantener despliegues reproducibles y escalables.",
+          tags: [
+            "Lumen",
+            "PostgreSQL",
+            "PostGIS",
+            "Leaflet",
+            "JWT",
+            "Docker",
+            "OpenShift",
+            "Nginx",
+          ],
+          preview: "https://s3.borendain.com/public/portfolio-web/antenas/01antenas.png",
+          images: [
+            "https://s3.borendain.com/public/portfolio-web/antenas/01antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/02antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/03antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/04antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/05antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/06antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/07antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/08antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/09antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/10antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/11antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/12antenas.png",
+          ],
+          siteUrl: null,
+          githubUrl: null,
         },
       ],
     },
@@ -82,18 +172,12 @@ const translations = {
           title: "Senior Fullstack Developer / AI Fullstack Engineer",
           company: "Qanta Media — Remoto, Costa Rica",
           points: [
-            "Desarrollo aplicaciones y plataformas Full Stack utilizando TypeScript, React, Next.js, Node.js y tecnologías modernas de JavaScript, participando tanto en la arquitectura del producto como en su implementación.",
-            "Diseño e implemento integraciones con Inteligencia Artificial para incorporar capacidades generativas, automatización y procesamiento inteligente dentro de aplicaciones web y flujos de negocio.",
-            "Desarrollo y mantengo APIs y servicios backend, trabajando con Node.js, Laravel, Java Spring Boot y otras tecnologías dependiendo de las necesidades y arquitectura de cada proyecto.",
-            "Desarrollo aplicaciones y experiencias multiplataforma utilizando React Native, compartiendo conocimiento, componentes y lógica de negocio dentro del ecosistema React y TypeScript.",
-            "Implemento soluciones utilizando Supabase y PostgreSQL para autenticación, persistencia de datos, APIs, servicios backend y funcionalidades en tiempo real.",
-            "Lidero el desarrollo de aplicaciones web de alto rendimiento utilizando React, Node.js, Next.js, Astro y Strapi, diseñando arquitecturas que facilitan la escalabilidad, mantenibilidad y autogestión de contenido.",
-            "Participo en la modernización y migración de sistemas legacy, incluyendo migraciones de endpoints y servicios hacia arquitecturas basadas en Java Spring Boot y tecnologías modernas.",
-            "Desarrollo y mantengo sistemas de generación y procesamiento de contenido utilizando Python, Jinja y herramientas de automatización.",
-            "Diseño, despliego y mantengo aplicaciones en ambientes de QA y producción utilizando AWS, Google Cloud, Azure y DigitalOcean.",
-            "Implemento arquitecturas basadas en Docker y Kubernetes, incluyendo estrategias de escalabilidad y optimización de recursos para aplicaciones con diferentes niveles de demanda.",
-            "Diseño y mantengo pipelines de integración y despliegue continuo utilizando GitHub Actions, automatizando procesos de testing, build y deployment.",
-            "Colaboro en decisiones técnicas relacionadas con arquitectura, performance, seguridad, bases de datos, infraestructura y experiencia de desarrollo.",
+            "Desarrollo aplicaciones web y mobile Full Stack con TypeScript, React, React Native, Next.js, Node.js, Supabase, AstroJS y Strapi.",
+            "Diseño, desarrollo y mantengo REST APIs y servicios backend con Node.js, Laravel y Java Spring Boot, incluyendo la modernización y migración de endpoints.",
+            "Implemento soluciones e integraciones de Inteligencia Artificial en aplicaciones y flujos de negocio.",
+            "Diseño soluciones backend y persistencia de datos con Supabase y PostgreSQL, orientadas a rendimiento y escalabilidad.",
+            "Despliego y administro aplicaciones en AWS, Google Cloud, Azure y DigitalOcean con Docker, Kubernetes, autoscaling y entornos de producción y QA.",
+            "Automatizo procesos de deployment mediante CI/CD y GitHub Actions para mejorar la consistencia de las entregas y la eficiencia del ciclo de desarrollo.",
           ],
         },
         {
@@ -101,13 +185,11 @@ const translations = {
           title: "Lead BackEnd Developer",
           company: "INFOTEC — CDMX, México",
           points: [
-            "Lideré el desarrollo y arquitectura backend de aplicaciones web y plataformas digitales utilizando Laravel, PHP, JavaScript, Vue.js y diferentes tecnologías del ecosistema web.",
-            "Diseñé arquitecturas de bases de datos relacionales y no relacionales utilizando PostgreSQL y Elasticsearch, optimizando consultas, organización de datos y escalabilidad de los sistemas.",
-            "Implementé prácticas de desarrollo seguro orientadas a proteger aplicaciones, servicios y datos sensibles.",
-            "Administré y desplegué aplicaciones sobre infraestructura Linux utilizando RHEL y CentOS, además de tecnologías de contenerización y orquestación como Docker y Red Hat OpenShift.",
-            "Diseñé soluciones de automatización de procesos y administración de servidores utilizando Bash y Python, reduciendo tareas manuales dentro de los procesos operativos.",
-            "Participé en decisiones de arquitectura, infraestructura, bases de datos y estrategia técnica para diferentes sistemas.",
-            "Lideré y mentoreé a un equipo de desarrolladores, realizando revisión técnica, resolución de problemas y acompañamiento durante la implementación y entrega de proyectos.",
+            "Lideré el desarrollo de aplicaciones web seguras con Laravel, PHP, JavaScript, Vue.js y jQuery, aplicando prácticas de protección de datos.",
+            "Diseñé arquitecturas de datos relacionales y no relacionales con PostgreSQL y Elasticsearch, mejorando en 30% la eficiencia de consultas y la escalabilidad.",
+            "Gestioné mantenimiento y despliegues en RHEL y CentOS con Docker y Red Hat OpenShift, mejorando 25% la estabilidad y reduciendo 30% el downtime.",
+            "Desarrollé automatizaciones para servidores con Python y Bash, reduciendo en 50% el tiempo dedicado a tareas operativas manuales.",
+            "Lideré y mentoreé a un equipo de tres desarrolladores, participando en decisiones técnicas, resolución de problemas y entrega de proyectos.",
           ],
         },
         {
@@ -115,26 +197,53 @@ const translations = {
           title: "Fullstack Junior Developer",
           company: "Presidencia de México — CDMX, México",
           points: [
-            "Participé en el ciclo completo de desarrollo de aplicaciones web, desde levantamiento de requerimientos y diseño de soluciones hasta desarrollo, deployment y mantenimiento.",
-            "Desarrollé aplicaciones Full Stack utilizando Laravel y PHP para backend, junto con JavaScript, jQuery y Vue.js para frontend.",
-            "Diseñé e implementé bases de datos utilizando PostgreSQL y MySQL, incluyendo modelado de datos, optimización de consultas, mantenimiento y mejora de sistemas existentes.",
-            "Configuré y administré servidores web utilizando Nginx sobre diferentes distribuciones Linux, incluyendo CentOS Server, Ubuntu Server y Fedora.",
-            "Implementé flujos de desarrollo y control de versiones con Git para mejorar la colaboración, seguimiento de cambios y estabilidad de las entregas.",
-            "Participé en diseño de interfaces, creación de wireframes, maquetación y desarrollo de nuevas funcionalidades para plataformas utilizadas dentro de la administración pública.",
+            "Participé en el ciclo completo de aplicaciones web, desde levantamiento de requerimientos y diseño hasta implementación y deployment con Laravel, PHP, JavaScript, Vue.js y jQuery; las mejoras redujeron en 30% el tiempo operativo de los usuarios.",
+            "Diseñé, implementé y mantuve bases de datos con PostgreSQL y MySQL, optimizando consultas, rendimiento e integridad de la información.",
+            "Configuré y administré servidores web con Nginx en CentOS, Ubuntu Server y Fedora, utilizando Git para control de versiones y colaboración.",
           ],
         },
       ],
       education: "Educación",
       degree: "Ingeniería en Computación",
       school: "Universidad Autónoma Metropolitana · 2014 — 2018",
-      coursesLabel: "Cursos:",
+      coursesLabel: "Certificaciones e insignias",
+      viewCredential: "Ver credencial",
       courses: [
-        { name: "AI for Brainstorming and Planning", url: "https://www.credly.com/badges/bf9ec647-423f-4f70-a804-04200900878a" },
-        { name: "AI Fundamentals", url: "https://www.credly.com/badges/087ae33b-1022-43d6-94d5-ff2256cf3e47" },
-        { name: "Introduction to Generative AI", url: "https://www.coursera.org/account/accomplishments/certificate/V4ADNFWSPRP8" },
-        { name: "EF SET Certificate B2 English", url: "https://cert.efset.org/b3G39m" },
-        { name: "ReactJS", url: "https://platzi.com/p/davirin96/curso/2444-react/diploma/detalle/" },
-        { name: "PHP con Laravel", url: "https://platzi.com/p/davirin96/curso/1467-course/diploma/detalle/" }
+        {
+          name: "Google AI for Content Creation",
+          issuer: "Google · Credly",
+          url: "https://www.credly.com/earner/earned/badge/8d4c4c72-0cb0-4028-9508-6aebae81a2af",
+        },
+        {
+          name: "Google AI for Brainstorming and Planning",
+          issuer: "Google · Credly",
+          url: "https://www.credly.com/badges/bf9ec647-423f-4f70-a804-04200900878a/public_url",
+        },
+        {
+          name: "Google AI for Research and Insights",
+          issuer: "Google · Credly",
+          url: "https://www.credly.com/badges/3fd7ebc9-51be-47df-905f-02b4367b69b4/public_url",
+        },
+        {
+          name: "Google AI for Writing and Communicating",
+          issuer: "Google · Credly",
+          url: "https://www.credly.com/badges/ef716010-a7d3-4c61-8aa9-9a48d79c3912/public_url",
+        },
+        {
+          name: "Google AI Fundamentals",
+          issuer: "Google · Credly",
+          url: "https://www.credly.com/badges/087ae33b-1022-43d6-94d5-ff2256cf3e47/public_url",
+        },
+        {
+          name: "Introduction to Generative AI",
+          issuer: "Google · Coursera",
+          url: "https://www.coursera.org/account/accomplishments/certificate/V4ADNFWSPRP8",
+        },
+        {
+          name: "EF SET Certificate B2 English",
+          issuer: "EF SET",
+          url: "https://cert.efset.org/b3G39m",
+        },
       ],
       languages: "Idiomas",
       langs: ["Español — Nativo", "Inglés — Intermedio B2"],
@@ -149,8 +258,8 @@ const translations = {
   },
   en: {
     nav: {
-      home: "Home",
-      about: "About Me",
+      home: "Professional Summary",
+      skills: "Skills",
       projects: "Portfolio",
       experience: "Experience",
       contact: "Contact",
@@ -161,60 +270,150 @@ const translations = {
       links: "Links",
       downloadCv: "Download CV",
     },
-    hero: {
-      title: "Efficient web solutions, from backend to the cloud",
-      subtitle:
-        "Senior AI Fullstack Engineer with more than 7 years of experience designing, developing and deploying web applications, mobile applications and scalable backend solutions.",
-      cta: "View Portfolio",
-    },
     about: {
-      title: "About Me",
+      title: "Professional Summary",
       p1: "Full Stack Software Engineer with over 7 years of experience developing, designing, and deploying scalable web applications, digital platforms, and backend solutions.",
       p2: "I am currently focused on developing modern products driven by Artificial Intelligence, integrating AI models and services within web applications and business workflows. I have end-to-end experience in digital products using technologies such as TypeScript, React, React Native, Node.js, Next.js, and Supabase, as well as in API design, backend architectures, databases, and cloud services.",
       p3: "My experience combines Front-End, Back-End, Mobile, Cloud and DevOps development, allowing me to participate in the entire product lifecycle: architecture, development, integrations, infrastructure, automation, deployment, monitoring and optimization.",
       p4: "I have worked with infrastructures in AWS, Google Cloud, Azure and DigitalOcean, implementing solutions with Docker, Kubernetes, OpenShift and GitHub Actions. I also have extensive experience designing and managing relational and non-relational databases using PostgreSQL, MySQL, Supabase and Elasticsearch.",
       p5: "Throughout my career, I have participated in and led development teams, defined technical architectures, improved deployment processes and built products focused on performance, scalability, maintainability and user experience.",
     },
+    skills: {
+      title: "Skills",
+      intro:
+        "Technologies and capabilities I use to design, build, and operate end-to-end digital products.",
+      groups: [
+        {
+          title: "Artificial intelligence",
+          items: [
+            "Generative AI",
+            "OpenAI API",
+            "Gemini API",
+            "RAG",
+            "Vector Databases",
+            "AI Agents",
+            "MCP",
+            "pgvector",
+          ],
+        },
+        {
+          title: "Languages",
+          items: ["TypeScript", "JavaScript", "Python", "PHP", "Java", "Bash"],
+        },
+        {
+          title: "Frontend & mobile",
+          items: ["React", "Next.js", "Vue.js", "Astro", "React Native", "Cross-platform Mobile"],
+        },
+        {
+          title: "Backend",
+          items: ["Node.js", "Laravel", "Java Spring Boot", "REST APIs", "API Integration"],
+        },
+        {
+          title: "Data",
+          items: [
+            "PostgreSQL",
+            "Supabase",
+            "MySQL",
+            "Elasticsearch",
+            "Database Design",
+            "Query Optimization",
+          ],
+        },
+        {
+          title: "Cloud & DevOps",
+          items: [
+            "AWS",
+            "Google Cloud",
+            "Azure",
+            "DigitalOcean",
+            "Docker",
+            "Kubernetes",
+            "OpenShift",
+            "GitHub Actions",
+            "CI/CD",
+            "Linux",
+            "Nginx",
+          ],
+        },
+        {
+          title: "Software engineering",
+          items: [
+            "Software Architecture",
+            "System Design",
+            "Scalability",
+            "Performance Optimization",
+            "Technical Leadership",
+            "Code Review",
+          ],
+        },
+      ],
+    },
     projects: {
       title: "Portfolio",
+      viewProject: "View project",
+      gallery: "Project gallery",
+      site: "Site",
       repoLabel: (title: string) => `${title} repository`,
       demoLabel: (title: string) => `${title} live demo`,
       items: [
         {
-          title: "AI Chat Orchestrator",
+          title: "Modern Estates",
           description:
-            "Context-aware chat orchestration layer that routes conversations to the right model and escalates complex cases.",
-          tags: ["Next.js", "Supabase", "LLMs"],
+            "A premium property platform that centralizes sales, legal documentation, and digital signatures for domestic and international clients.",
+          details:
+            "I developed a high-end property sales platform with Laravel and hexagonal architecture, paired with a Next.js frontend. The solution uses PostgreSQL for data persistence and runs on DigitalOcean, with secure storage for assets and legal records in S3-compatible buckets. I integrated DocuSign for digital-signature workflows and connected WebSockets and Webhooks to reflect status updates in real time.",
+          tags: ["Laravel", "Next.js", "PostgreSQL", "DigitalOcean", "DocuSign", "WebSockets"],
+          preview:
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/01modern-estates.png",
+          images: [
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/02modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/03modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/04modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/05modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/06modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/07modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/08modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/09modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/10modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/11modern-estates.png",
+            "https://s3.borendain.com/public/portfolio-web/modern-estates/12modern-estates.png",
+          ],
+          siteUrl: "https://modernestates.borendain.com/",
+          githubUrl: null,
         },
         {
-          title: "Laravel CMS",
+          title: "Telecommunications Antenna Monitoring",
           description:
-            "Modular content management system with granular permissions and an editorial approval workflow.",
-          tags: ["Laravel", "MySQL", "Livewire"],
-        },
-        {
-          title: "Dekiris",
-          description:
-            "Workflow automation product for document review, notifications and competitive analytics.",
-          tags: ["TypeScript", "BullMQ"],
-        },
-        {
-          title: "Orchestrator",
-          description:
-            "Secure, rate-limited API gateway routing traffic across internal microservices with full observability.",
-          tags: ["Go", "Docker", "Prometheus"],
-        },
-        {
-          title: "Engineering Dashboard",
-          description:
-            "Real-time analytics dashboard tracking team velocity, system health and product metrics.",
-          tags: ["React", "Recharts"],
-        },
-        {
-          title: "AI Educator",
-          description:
-            "Adaptive learning assistant that generates lessons and tracks student progress automatically.",
-          tags: ["Python", "OpenAI"],
+            "An operations system for monitoring a nationwide antenna network, coordinating incidents, and supporting field work in underserved areas.",
+          details:
+            "I built an operations-control platform for a telecommunications base-station network. I implemented Lumen microservices, JWT authentication, role-based permissions, and OpenAPI/Swagger documentation to integrate the participating systems. I designed the PostgreSQL database and developed geospatial capabilities with PostGIS and Leaflet to locate antennas and incidents, generate reports, and export information. I also handled deployment on an Nginx VPS and worked with Docker containers on OpenShift to maintain reproducible, scalable releases.",
+          tags: [
+            "Lumen",
+            "PostgreSQL",
+            "PostGIS",
+            "Leaflet",
+            "JWT",
+            "Docker",
+            "OpenShift",
+            "Nginx",
+          ],
+          preview: "https://s3.borendain.com/public/portfolio-web/antenas/01antenas.png",
+          images: [
+            "https://s3.borendain.com/public/portfolio-web/antenas/01antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/02antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/03antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/04antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/05antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/06antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/07antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/08antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/09antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/10antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/11antenas.png",
+            "https://s3.borendain.com/public/portfolio-web/antenas/12antenas.png",
+          ],
+          siteUrl: null,
+          githubUrl: null,
         },
       ],
     },
@@ -226,18 +425,12 @@ const translations = {
           title: "Senior Fullstack Developer / AI Fullstack Engineer",
           company: "Qanta Media — Remote, Costa Rica",
           points: [
-            "Developing applications and full-stack platforms with TypeScript, React, Next.js, Node.js, and modern JavaScript technologies, participating in both product architecture and implementation.",
-            "Designing and implementing integrations with Artificial Intelligence to incorporate generative, automation, and intelligent processing capabilities within web applications and business workflows.",
-            "Developing and maintaining APIs and backend services using Node.js, Laravel, Java Spring Boot, and other technologies depending on project requirements and architecture.",
-            "Developing applications and cross-platform experiences with React Native, sharing knowledge, components, and business logic within the React and TypeScript ecosystem.",
-            "Implementing solutions with Supabase and PostgreSQL for authentication, data persistence, APIs, backend services, and real-time functionalities.",
-            "Leading the development of high-performance web applications using React, Node.js, Next.js, Astro, and Strapi, designing architectures that facilitate scalability, maintainability, and content self-management.",
-            "Participating in the modernization and migration of legacy systems, including endpoint and service migrations towards architectures based on Java Spring Boot and modern technologies.",
-            "Developing and maintaining content generation and processing systems using Python, Jinja, and automation tools.",
-            "Designing, deploying, and maintaining applications in QA and production environments using AWS, Google Cloud, Azure, and DigitalOcean.",
-            "Implementing architectures based on Docker and Kubernetes, including scalability strategies and resource optimization for applications with varying demand levels.",
-            "Designing and maintaining continuous integration and deployment pipelines using GitHub Actions, automating testing, build, and deployment processes.",
-            "Collaborating on technical decisions related to architecture, performance, security, databases, infrastructure, and developer experience.",
+            "Developing full-stack web and mobile applications with TypeScript, React, React Native, Next.js, Node.js, Supabase, AstroJS, and Strapi.",
+            "Designing, developing, and maintaining REST APIs and backend services with Node.js, Laravel, and Java Spring Boot, including endpoint modernization and migration.",
+            "Implementing Artificial Intelligence solutions and integrations in applications and business workflows.",
+            "Designing backend solutions and data persistence with Supabase and PostgreSQL, focused on performance and scalability.",
+            "Deploying and administering applications on AWS, Google Cloud, Azure, and DigitalOcean with Docker, Kubernetes, autoscaling, and production and QA environments.",
+            "Automating deployment processes through CI/CD and GitHub Actions to improve delivery consistency and development-cycle efficiency.",
           ],
         },
         {
@@ -245,13 +438,11 @@ const translations = {
           title: "Lead BackEnd Developer",
           company: "INFOTEC — Mexico City, Mexico",
           points: [
-            "Leading backend development and architecture for web applications and digital platforms using Laravel, PHP, JavaScript, Vue.js, and various ecosystem technologies.",
-            "Designing relational and non-relational database architectures with PostgreSQL and Elasticsearch, optimizing queries, data organization, and system scalability.",
-            "Implementing security development practices aimed at protecting applications, services, and sensitive data.",
-            "Administering and deploying applications on Linux infrastructure using RHEL and CentOS, in addition to containerization and orchestration technologies such as Docker and Red Hat OpenShift.",
-            "Designing process automation and server administration solutions using Bash and Python, reducing manual tasks within operational workflows.",
-            "Participating in architectural, infrastructure, database, and technical strategy decisions for different systems.",
-            "Leading and mentoring a team of developers, conducting technical reviews, problem resolution, and support during project implementation and delivery.",
+            "Led the development of secure web applications with Laravel, PHP, JavaScript, Vue.js, and jQuery, applying data-protection practices.",
+            "Designed relational and non-relational data architectures with PostgreSQL and Elasticsearch, improving query efficiency and scalability by 30%.",
+            "Managed maintenance and deployments on RHEL and CentOS with Docker and Red Hat OpenShift, improving system stability by 25% and reducing downtime by 30%.",
+            "Developed server automations with Python and Bash, reducing time spent on manual operational tasks by 50%.",
+            "Led and mentored a team of three developers, contributing to technical decisions, problem solving, and project delivery.",
           ],
         },
         {
@@ -259,26 +450,53 @@ const translations = {
           title: "Fullstack Junior Developer",
           company: "Presidencia de México — Mexico City, Mexico",
           points: [
-            "Participated in the complete development cycle of web applications, from requirements gathering and solution design to development, deployment, and maintenance.",
-            "Developed Full Stack applications using Laravel and PHP for backend, along with JavaScript, jQuery, and Vue.js for frontend.",
-            "Designed and implemented databases using PostgreSQL and MySQL, including data modeling, query optimization, maintenance, and improvement of existing systems.",
-            "Configured and administered web servers using Nginx on different Linux distributions, including CentOS Server, Ubuntu Server, and Fedora.",
-            "Implemented development and version control workflows with Git to improve collaboration, change tracking, and delivery stability.",
-            "Participated in interface design, wireframe creation, layout, and development of new features for platforms used within public administration.",
+            "Participated in the full web application lifecycle, from requirements gathering and design to implementation and deployment with Laravel, PHP, JavaScript, Vue.js, and jQuery; improvements reduced users' operational time by 30%.",
+            "Designed, implemented, and maintained PostgreSQL and MySQL databases, optimizing queries, performance, and data integrity.",
+            "Configured and administered Nginx web servers on CentOS, Ubuntu Server, and Fedora, using Git for version control and collaboration.",
           ],
         },
       ],
       education: "Education",
       degree: "Computer Engineering",
       school: "Universidad Autónoma Metropolitana · 2014 — 2018",
-      coursesLabel: "Courses:",
+      coursesLabel: "Certifications & badges",
+      viewCredential: "View credential",
       courses: [
-        { name: "AI for Brainstorming and Planning", url: "https://www.credly.com/badges/bf9ec647-423f-4f70-a804-04200900878a" },
-        { name: "AI Fundamentals", url: "https://www.credly.com/badges/087ae33b-1022-43d6-94d5-ff2256cf3e47" },
-        { name: "Introduction to Generative AI", url: "https://www.coursera.org/account/accomplishments/certificate/V4ADNFWSPRP8" },
-        { name: "EF SET Certificate B2 English", url: "https://cert.efset.org/b3G39m" },
-        { name: "ReactJS", url: "https://platzi.com/p/davirin96/curso/2444-react/diploma/detalle/" },
-        { name: "PHP with Laravel", url: "https://platzi.com/p/davirin96/curso/1467-course/diploma/detalle/" }
+        {
+          name: "Google AI for Content Creation",
+          issuer: "Google · Credly",
+          url: "https://www.credly.com/earner/earned/badge/8d4c4c72-0cb0-4028-9508-6aebae81a2af",
+        },
+        {
+          name: "Google AI for Brainstorming and Planning",
+          issuer: "Google · Credly",
+          url: "https://www.credly.com/badges/bf9ec647-423f-4f70-a804-04200900878a/public_url",
+        },
+        {
+          name: "Google AI for Research and Insights",
+          issuer: "Google · Credly",
+          url: "https://www.credly.com/badges/3fd7ebc9-51be-47df-905f-02b4367b69b4/public_url",
+        },
+        {
+          name: "Google AI for Writing and Communicating",
+          issuer: "Google · Credly",
+          url: "https://www.credly.com/badges/ef716010-a7d3-4c61-8aa9-9a48d79c3912/public_url",
+        },
+        {
+          name: "Google AI Fundamentals",
+          issuer: "Google · Credly",
+          url: "https://www.credly.com/badges/087ae33b-1022-43d6-94d5-ff2256cf3e47/public_url",
+        },
+        {
+          name: "Introduction to Generative AI",
+          issuer: "Google · Coursera",
+          url: "https://www.coursera.org/account/accomplishments/certificate/V4ADNFWSPRP8",
+        },
+        {
+          name: "EF SET Certificate B2 English",
+          issuer: "EF SET",
+          url: "https://cert.efset.org/b3G39m",
+        },
       ],
       languages: "Languages",
       langs: ["Spanish — Native", "English — Intermediate B2"],
@@ -325,9 +543,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const t = translations[lang] as Translations;
 
   return (
-    <LanguageContext.Provider value={{ lang, setLang, t }}>
-      {children}
-    </LanguageContext.Provider>
+    <LanguageContext.Provider value={{ lang, setLang, t }}>{children}</LanguageContext.Provider>
   );
 }
 

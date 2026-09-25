@@ -1,3 +1,4 @@
+import { Award, ExternalLink } from "lucide-react";
 import { useLanguage } from "@/lib/i18n";
 
 export function Experience() {
@@ -42,30 +43,22 @@ export function Experience() {
           <h3 className="text-sm font-bold uppercase tracking-wide text-foreground">
             {t.experience.education}
           </h3>
-          <p className="mt-2 text-xs text-muted-foreground">
-            {t.experience.degree}
-          </p>
-          <p className="text-xs text-subdued">{t.experience.school}</p>
-          <p className="mt-3 text-xs text-muted-foreground">
-            <span className="font-semibold">{t.experience.coursesLabel}</span>{" "}
-            {t.experience.courses.map((course, index) => (
-              <span key={course.name}>
-                {course.url ? (
-                  <a
-                    href={course.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-spotify underline underline-offset-2 transition-colors"
-                  >
-                    {course.name}
-                  </a>
-                ) : (
-                  course.name
-                )}
-                {index < t.experience.courses.length - 1 ? ", " : ""}
-              </span>
-            ))}
-          </p>
+          <div className="mt-4 flex items-center gap-4">
+            <div className="flex h-16 w-28 shrink-0 items-center justify-center rounded-lg bg-white p-2">
+              <img
+                src="https://www.comunicacionsocial.uam.mx/identidaduam/images/encabezado.png"
+                alt="Logotipo de la Universidad Autónoma Metropolitana"
+                className="max-h-full max-w-full object-contain"
+                loading="lazy"
+              />
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-foreground">
+                {t.experience.degree}
+              </p>
+              <p className="mt-1 text-xs text-subdued">{t.experience.school}</p>
+            </div>
+          </div>
         </div>
         <div className="rounded-xl border border-border bg-elevated p-5">
           <h3 className="text-sm font-bold uppercase tracking-wide text-foreground">
@@ -76,6 +69,39 @@ export function Experience() {
               <li key={l}>{l}</li>
             ))}
           </ul>
+        </div>
+      </div>
+
+      <div className="mt-5 rounded-xl border border-border bg-elevated p-5">
+        <h3 className="text-sm font-bold uppercase tracking-wide text-foreground">
+          {t.experience.coursesLabel}
+        </h3>
+        <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+          {t.experience.courses.map((course) => (
+            <article
+              key={course.name}
+              className="group flex min-h-36 flex-col rounded-lg border border-border bg-ink-light p-4 transition-colors hover:border-spotify/60"
+            >
+              <div className="flex items-start gap-3">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg border border-spotify/40 bg-spotify/10 text-spotify">
+                  <Award className="h-5 w-5" aria-hidden="true" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold leading-snug text-foreground">{course.name}</p>
+                  <p className="mt-1 text-xs text-subdued">{course.issuer}</p>
+                </div>
+              </div>
+              <a
+                href={course.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto inline-flex items-center gap-1.5 pt-4 text-xs font-semibold text-spotify transition-colors group-hover:underline"
+              >
+                {t.experience.viewCredential}
+                <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
+              </a>
+            </article>
+          ))}
         </div>
       </div>
     </section>
